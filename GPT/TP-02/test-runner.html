@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS Unit Tests</title>
+    <style>
+      body { font-family: system-ui, sans-serif; padding: 20px; }
+      .pass { color: green; }
+      .fail { color: red; }
+    </style>
+  </head>
+  <body>
+    <h1>Test Results</h1>
+    <ul id="results"></ul>
+
+    <script src="app.js"></script>
+    <script src="app.test.js"></script>
+    <script>
+      const list = document.getElementById("results");
+      runTests().forEach((r) => {
+        const li = document.createElement("li");
+        li.textContent = r.status === "pass" ? `✅ ${r.name}` : `❌ ${r.name} — ${r.error}`;
+        li.className = r.status;
+        list.appendChild(li);
+      });
+    </script>
+  </body>
+</html>
