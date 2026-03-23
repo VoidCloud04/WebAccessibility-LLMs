@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CS Student Project Showcase</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="brand">Ava Patel</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="hero" id="about">
+        <div class="hero-text">
+          <p class="eyebrow">Computer Science Student</p>
+          <h1>Building clean, useful software.</h1>
+          <p class="lead">
+            I’m a CS student focused on systems, web development, and data-driven products.
+            This showcase highlights my coursework and personal projects.
+          </p>
+          <div class="meta">
+            <span>University: Example State</span>
+            <span>Class of 2027</span>
+            <span>Open to internships</span>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop" alt="Student working" />
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <h2>Skills</h2>
+        <div class="chips">
+          <span class="chip">JavaScript</span>
+          <span class="chip">Python</span>
+          <span class="chip">Data Structures</span>
+          <span class="chip">Algorithms</span>
+          <span class="chip">SQL</span>
+          <span class="chip">Git</span>
+          <span class="chip">HTML/CSS</span>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-head">
+          <h2>Projects</h2>
+          <div class="search">
+            <input id="project-search" type="text" placeholder="Search projects or tags..." />
+            <select id="project-filter">
+              <option value="all">All</option>
+              <option value="web">Web</option>
+              <option value="data">Data</option>
+              <option value="systems">Systems</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="projects-grid" class="grid">
+          <!-- cards injected by JS -->
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="contact-image">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop" alt="Contact placeholder" />
+        </div>
+        <div class="contact-form">
+          <h2>Contact</h2>
+          <form id="contact-form" novalidate>
+            <label>
+              Name
+              <input type="text" id="name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" id="email" required />
+            </label>
+            <label>
+              Message
+              <textarea id="message" rows="4" required></textarea>
+            </label>
+            <button type="submit">Send Message</button>
+            <p id="form-msg" class="form-msg"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+      <div class="modal-content">
+        <button class="close-btn" id="close-modal" aria-label="Close">×</button>
+        <h3 id="modal-title"></h3>
+        <p id="modal-desc"></p>
+        <div id="modal-tags" class="tags"></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

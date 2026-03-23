@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Minimalist Dev Portfolio</title>
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+  <body>
+    <main id="app" class="app">
+      <header class="hero">
+        <div class="hero-text">
+          <p class="eyebrow" data-bind="role"></p>
+          <h1 data-bind="name"></h1>
+          <p class="subtitle" data-bind="tagline"></p>
+          <div class="cta">
+            <a class="btn primary" data-bind-href="ctaPrimary.href" data-bind="ctaPrimary.label"></a>
+            <a class="btn ghost" data-bind-href="ctaSecondary.href" data-bind="ctaSecondary.label"></a>
+          </div>
+          <div class="meta" id="meta"></div>
+        </div>
+        <div class="hero-card" id="hero-card"></div>
+      </header>
+
+      <section class="section" id="about">
+        <h2>About</h2>
+        <p data-bind="about"></p>
+      </section>
+
+      <section class="section" id="skills">
+        <h2>Skills</h2>
+        <div class="chips" id="skills-list"></div>
+      </section>
+
+      <section class="section" id="projects">
+        <h2>Projects</h2>
+        <div class="grid" id="projects-grid"></div>
+      </section>
+
+      <section class="section" id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery" id="gallery-grid"></div>
+      </section>
+
+      <section class="section" id="contact">
+        <h2>Contact</h2>
+        <div class="contact" id="contact-card"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
