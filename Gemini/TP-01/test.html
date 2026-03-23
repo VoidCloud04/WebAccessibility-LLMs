@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio Unit Tests</title>
+    <style>
+        body { font-family: monospace; background: #111; color: #fff; padding: 20px; }
+        .pass { color: #00ff00; }
+        .fail { color: #ff0000; }
+        .summary { margin-top: 20px; font-size: 1.2rem; border-top: 1px solid #444; padding-top: 10px; }
+        
+        /* Hidden fixtures area for DOM testing */
+        #fixtures { display: none; }
+    </style>
+</head>
+<body>
+    <h1>Unit Test Results</h1>
+    <div id="results"></div>
+
+    <!-- Test Fixtures (Hidden DOM elements for testing) -->
+    <div id="fixtures">
+        <div id="header-root"></div>
+        <div id="bio-root"></div>
+        <div id="projects-root"></div>
+        <div id="gallery-root"></div>
+        <div id="footer-root"></div>
+    </div>
+
+    <!-- 1. Load the App Code -->
+    <script src="script.js"></script>
+
+    <!-- 2. Load the Test Logic -->
+    <script src="tests.js"></script>
+</body>
+</html>

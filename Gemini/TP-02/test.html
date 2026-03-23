@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unit Tests - Student Portfolio</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; padding: 20px; background: #f4f4f9; }
+        h1 { color: #333; }
+        .summary { margin-bottom: 20px; padding: 15px; background: #fff; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .pass-count { color: #27ae60; font-weight: bold; }
+        .fail-count { color: #c0392b; font-weight: bold; }
+        
+        .test-result { padding: 10px; margin-bottom: 5px; border-left: 5px solid #ccc; background: #fff; }
+        .test-result.pass { border-left-color: #27ae60; color: #27ae60; }
+        .test-result.fail { border-left-color: #c0392b; color: #c0392b; }
+        .error-details { color: #555; font-size: 0.9em; margin-top: 5px; font-family: monospace; }
+        
+        /* Hidden area to load the app structure for integration tests */
+        #test-fixtures { display: none; }
+    </style>
+</head>
+<body>
+
+    <h1>Unit Test Report</h1>
+    <div id="summary" class="summary">Running tests...</div>
+    <div id="results"></div>
+
+    <!-- 
+      FIXTURES: 
+      We mock the HTML structure here so the JS has elements to grab onto. 
+      This mimics index.html 
+    -->
+    <div id="test-fixtures">
+        <div id="projectsContainer"></div>
+        <input type="text" id="searchInput">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        
+        <div id="projectModal" style="display:none;"></div>
+        <span class="close-modal"></span>
+        <h2 id="modalTitle"></h2>
+        <img id="modalImage">
+        <p id="modalDesc"></p>
+        <div id="modalTags"></div>
+
+        <form id="contactForm">
+            <input id="name"> <span id="nameError" class="error-msg"></span>
+            <input id="email"> <span id="emailError" class="error-msg"></span>
+            <textarea id="message"></textarea> <span id="msgError" class="error-msg"></span>
+            <p id="successMessage"></p>
+        </form>
+    </div>
+
+    <!-- 1. Load the Application Code -->
+    <script src="script.js"></script>
+
+    <!-- 2. Load the Tests -->
+    <script src="tests.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoidCloud04 Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header Section -->
+        <header id="header-root" class="fade-in"></header>
+        
+        <main>
+            <!-- Bio Section -->
+            <section id="bio-root" class="section fade-in"></section>
+            
+            <!-- Projects Section -->
+            <section id="projects-root" class="section fade-in"></section>
+            
+            <!-- Gallery Section -->
+            <section id="gallery-root" class="section fade-in"></section>
+        </main>
+
+        <footer id="footer-root"></footer>
+    </div>
+
+    <!-- Main Logic -->
+    <script src="script.js"></script>
+    <script>
+        // Auto-initialize when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            PortfolioApp.init(); 
+        });
+    </script>
+</body>
+</html>

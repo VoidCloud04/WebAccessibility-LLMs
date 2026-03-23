@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Tests Runner</title>
+    <style>
+        body { font-family: monospace; background: #111; color: #fff; padding: 2rem; }
+        h1 { border-bottom: 2px solid #333; padding-bottom: 1rem; }
+        .test-card { padding: 10px; margin-bottom: 5px; border-left: 5px solid #555; background: #222; }
+        .test-card.pass { border-color: #4ade80; color: #4ade80; }
+        .test-card.fail { border-color: #ef4444; color: #ef4444; }
+        .error-detail { color: #fca5a5; margin-top: 5px; font-size: 0.9em; padding-left: 10px; }
+    </style>
+</head>
+<body>
+    <h1>JS Unit Tests Report</h1>
+    <div id="test-results">Running tests...</div>
+
+    <!-- 1. Load the Logic to be tested -->
+    <script src="script.js"></script>
+
+    <!-- 2. Load and Run the Tests -->
+    <script src="tests.js"></script>
+</body>
+</html>

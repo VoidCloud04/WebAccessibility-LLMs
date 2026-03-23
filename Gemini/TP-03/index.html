@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevPortfolio | CS Student</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">./dev_portfolio</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <span class="terminal-badge">> Hello, World!</span>
+                <h1>Building the Future<br>One <span class="accent">Bit</span> at a Time.</h1>
+                <p>I'm a Computer Science student passionate about distributed systems, full-stack development, and clean architecture.</p>
+                <div class="cta-group">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container grid-2">
+                <div class="about-text">
+                    <h2 class="section-title">About Me</h2>
+                    <p>Currently pursuing a B.S. in Computer Science. My journey started with a simple "Hello World" in Python and has evolved into building complex web applications and experimenting with AI models.</p>
+                    <p>When I'm not coding, I'm contributing to open source, participating in hackathons, or exploring new tech stacks.</p>
+                </div>
+                <div class="about-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Coding Setup" class="profile-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section bg-dim">
+            <div class="container">
+                <h2 class="section-title">Technical Arsenal</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3>Frontend</h3>
+                        <div class="skill-tags">
+                            <span>React</span>
+                            <span>TypeScript</span>
+                            <span>Tailwind CSS</span>
+                            <span>Next.js</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Backend</h3>
+                        <div class="skill-tags">
+                            <span>Node.js</span>
+                            <span>Python / Django</span>
+                            <span>Go</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <h3>DevOps & Tools</h3>
+                        <div class="skill-tags">
+                            <span>Docker</span>
+                            <span>AWS</span>
+                            <span>Git/GitHub</span>
+                            <span>Linux</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Selected Works</h2>
+                    <div class="filter-controls">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="web">Web</button>
+                        <button class="filter-btn" data-filter="ai">AI/ML</button>
+                        <button class="filter-btn" data-filter="mobile">Mobile</button>
+                    </div>
+                </div>
+                
+                <div id="projects-grid" class="projects-grid">
+                    <!-- Projects injected via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section bg-dim">
+            <div class="container contact-container">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="contact-subtitle">Have a project in mind or just want to chat tech?</p>
+                
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name">
+                        <small class="error-msg" id="error-name"></small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email">
+                        <small class="error-msg" id="error-email"></small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="How can I help?"></textarea>
+                        <small class="error-msg" id="error-message"></small>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary full-width">Send Message</button>
+                    <div id="form-success" class="success-msg"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 DevPortfolio. Built with pure HTML/CSS/JS.</p>
+        </div>
+    </footer>
+
+    <!-- Project Details Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-title">Project Title</h2>
+            <div class="modal-body">
+                <img id="modal-img" src="" alt="Project">
+                <div class="modal-info">
+                    <p id="modal-desc">Description</p>
+                    <div id="modal-tags" class="skill-tags"></div>
+                    <a href="#" class="btn btn-primary" id="modal-link" target="_blank">View Code</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
