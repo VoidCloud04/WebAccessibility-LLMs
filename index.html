@@ -4,29 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testing Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>Test Results</h1>
     <h2>GPT 5.2 Codex</h2>
     <li>
         TP-01
-        <ul>AIM Score: 8.4/10 (2 Errors, 5 Alerts)</ul>
-        <ul>Unit Test Score: Failed to Run</ul>
+        <ul>AIM Score: 8.4/10 (2 <span class="red">Errors</span>, 5 <span class="yellow">Alerts</span>)</ul>
+        <ul>Unit Test Score: <span class="blue">Failed to Run</span></ul>
         TP-02
-        <ul>AIM Score: 7.9/10 (2 Errors, 2 Contrast Errors, 2 Alerts)</ul>
-        <ul>Unit Test Score: Failed to Run</ul>
+        <ul>AIM Score: 7.9/10 (2 <span class="red">Errors</span>, 2 <span class="red">Contrast Errors</span>, 2 <span class="yellow">Alerts</span>)</ul>
+        <ul>Unit Test Score: <span class="blue">Failed to Run</span></ul>
         TP-03
-        <ul>AIM Score: 8.4/10 (2 Errors, 3 Alerts)</ul>
+        <ul>AIM Score: 8.4/10 (2 <span class="red">Errors</span>, 3 <span class="yellow">Alerts</span>)</ul>
         <ul>Unit Test Score: Passed 6/6</ul>
     </li>
     <h2>Gemini 3 Pro</h2>
     <li>
         TP-01
-        <ul>AIM Score: 9.9/10 (3 Alerts)</ul>
+        <ul>AIM Score: 9.9/10 (3 <span class="yellow">Alerts</span>)</ul>
         <ul>Unit Test Score: 5/5</ul>
         TP-02
-        <ul>AIM Score: 9.7/10 (1 Error)</ul>
-        <ul>Unit Test Score: 6/8 - Failed Test 7,8</ul>
+        <ul>AIM Score: 9.7/10 (1 <span class="red">Error</span>)</ul>
+        <ul>Unit Test Score: 6/8 - <span class="blue">Failed Test 7,8</span></ul>
         TP-03
         <ul>AIM Score: 10/10</ul>
         <ul>Unit Test Score: 7/7</ul>
@@ -34,14 +38,14 @@
     <h2>Grok Code Flash 1</h2>
     <li>
         TP-01
-        <ul>AIM Score: 9.1/10 (1 Contrast Error, 2 Alerts)</ul>
+        <ul>AIM Score: 9.1/10 (1 <span class="red">Contrast Error</span>, 2 <span class="yellow">Alerts</span>)</ul>
         <ul>Unit Test Score: 12/12</ul>
         TP-02
-        <ul>AIM Score: 5.5/10 (1 Error, 9 Contrast Errors)</ul>
-        <ul>Unit Test Score: 1/5 - Didn't Run past Test 4</ul>
+        <ul>AIM Score: 5.5/10 (1 <span class="red">Error</span>, 9 <span class="red">Contrast Errors</span>)</ul>
+        <ul>Unit Test Score: 1/5 - <span class="blue">Didn't Run past Test 4</span></ul>
         TP-03
-        <ul>AIM Score: 4.8/10 (1 Error, 15 Contrast Errors, 4 Alerts)</ul>
-        <ul>Unit Test Score: 5/10 - Failed Test 6, Failed to Run Past Test 7</ul>
+        <ul>AIM Score: 4.8/10 (1 <span class="red">Error</span>, 15 <span class="red">Contrast Errors</span>, 4 <span class="yellow">Alerts</span>)</ul>
+        <ul>Unit Test Score: 5/10 - <span class="blue">Failed Test 6, Failed to Run Past Test 7</span></ul>
     </li>
 </body>
 </html>
